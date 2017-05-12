@@ -16,6 +16,7 @@ class Rectangle:
         bool is_circle()
     """
     def __init__(self, a, b):
+        "Class constructor, accepts length and width or two points"
         if (isinstance(a, tuple)):
             self.calclength(a, b)
         else:
@@ -34,18 +35,23 @@ class Rectangle:
             raise Exception
 
     def calclength(self, a, b):
+        "Calculates the distance between a and b and sets length"
         self.length = b[0] - a[0]
 
     def calcwidth(self, a, b):
+        "Calculates the distance between a and b and sets width"
             self.width = b[1] - a[1]
 
     def calcperimeter(self):
+        "Calculates the perimeter"
         self.perimeter = self.length * 2 + self.width * 2
 
     def calcarea(self):
+        "Calculates the area"
         self.area = self.length * self.width
 
     def is_circle(self):
+        "Determines if the rectangle is a circle"
         return self.width == self.length
 
 
